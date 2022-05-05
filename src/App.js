@@ -2,6 +2,8 @@
 import logo from './logoWhite.png'
 import './App.css';
 import { useState, useEffect } from 'react';
+import onepic from './onepic.jpg';
+import onepic2 from './onepic2.jpg';
 
 function App() {
 
@@ -45,7 +47,12 @@ function App() {
 
               <a href="https://drive.google.com/file/d/1BWkZsncnuW2MxAHvoqK4SfOPCXLPukl-/view?usp=sharing" target="_blank" className="btn-text" style={{paddingLeft: '1rem', paddingRight: '1rem'}}>MY RESUME &rarr;</a>
             </div>
-            <div className="col-1-of-3">Image Composition</div>
+            <div className="col-1-of-3">
+                    <div className="composition">
+                        <img src={onepic} alt="DP 1" className="composition__photo composition__photo--p1" />
+                        <img src={onepic2} alt="DP 2" className="composition__photo composition__photo--p2" />
+                    </div>
+                </div>
           </div>
         </section>
       </main>
