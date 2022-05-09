@@ -45,7 +45,7 @@ function App() {
               <h3 className="heading-tertiary u-margin-bottom-small">MY JOB ROLE - FRONTEND DEVELOPER</h3>
               <p className="paragraph">I am in duty of making dashboards for Receivable Analytics of B2B Business Clients using technical stack - ReactJS | HTML | CSS | MaterialUI | JSON | HighCharts | Crossfilter</p>
 
-              <a href="https://drive.google.com/file/d/1BWkZsncnuW2MxAHvoqK4SfOPCXLPukl-/view?usp=sharing" target="_blank" className="btn-text" style={{paddingLeft: '1rem', paddingRight: '1rem'}}>MY RESUME &rarr;</a>
+              <a href="https://drive.google.com/file/d/1UO7W7vbxAvAFX7zb6rxGqF12DxhfQKQN/view?usp=sharing" target="_blank" className="btn-text" style={{paddingLeft: '1rem', paddingRight: '1rem'}}>MY RESUME &rarr;</a>
             </div>
             <div className="col-1-of-3">
                     <div className="composition">
