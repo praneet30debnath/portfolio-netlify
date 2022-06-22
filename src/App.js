@@ -26,7 +26,7 @@ function App() {
             <span className="heading-primary--main">PORTFOLIO</span>
             <span className="heading-primary--sub">Praneet Debnath</span>
           </h1>
-          <a href="https://currency-react-project.herokuapp.com/" className="btn btn--white btn--animated" target="_blank">Discover my project</a>
+          <a href="https://sunny-marshmallow-9e0d89.netlify.app/" className="btn btn--white btn--animated" target="_blank">Discover my project</a>
         </div>
       </header>
       <main>
