@@ -14,7 +14,7 @@ function App() {
     document.title = title;
   }, [title]);
 
-  
+
 
   return (
     <div>
@@ -40,21 +40,50 @@ function App() {
           </div>
 
           <div className="row">
-            <div className="col-2-of-3" style={{textAlign: 'justify', textJustify: 'inter-word'}}>
+            <div className="col-2-of-3" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
               <h3 className="heading-tertiary u-margin-bottom-small">Hello!  My Name is Praneet Debnath</h3>
               <p className="paragraph">I'm a 2022 Passout Grad from KIIT University, Bhubaneshwar. Currently working in a SaaS FinTech company that leverages Artificial Intelligence-based Autonomous Systems to help companies automate Accounts Receivable and Treasury processes.</p>
 
-              <h3 className="heading-tertiary u-margin-bottom-small">MY JOB ROLE - FRONTEND DEVELOPER</h3>
-              <p className="paragraph">I am in duty of making dashboards for Receivable Analytics of B2B Business Clients using technical stack - ReactJS | HTML | CSS | MaterialUI | JSON | HighCharts | Crossfilter</p>
+              <h3 className="heading-tertiary u-margin-bottom-small">MY JOB ROLE - SOFTWARE ENGIEER</h3>
+              <p className="paragraph" style={{ marginBottom: "1rem" }}>Experienced full-stack developer adept at crafting robust solutions, leveraging 2 years of expertise across front-end, back-end, and databases.</p>
+              <p className="paragraph">Migration from ASG to K8s framework, enhancing performance and scalability seamlessly within tight timelines.</p>
 
-              <a href="https://drive.google.com/file/d/1UO7W7vbxAvAFX7zb6rxGqF12DxhfQKQN/view?usp=sharing" target="_blank" className="btn-text" style={{paddingLeft: '1rem', paddingRight: '1rem'}}>MY RESUME &rarr;</a>
+              <a href="https://drive.google.com/file/d/1pc8vdQ_uZSJGHw8GGd5DkFug0DtzWpQz/view?usp=sharing" target="_blank" className="btn-text" style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>MY RESUME &rarr;</a>
             </div>
             <div className="col-1-of-3">
-                    <div className="composition">
-                        <img src={onepic} alt="DP 1" className="composition__photo composition__photo--p1" />
-                        <img src={onepic2} alt="DP 2" className="composition__photo composition__photo--p2" />
-                    </div>
-                </div>
+              <div className="composition">
+                <img src={onepic} alt="DP 1" className="composition__photo composition__photo--p1" />
+                <img src={onepic2} alt="DP 2" className="composition__photo composition__photo--p2" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section-life-as-an-engineer">
+          <div className="u-center-text u-margin-bottom-big">
+            <h2 className="heading-secondary-white">
+              LIFE AS A SOFTWARE ENGINEER
+            </h2>
+          </div>
+
+          <div className="row">
+            <div className="col-1-of-3" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+              <h3 className="heading-tertiary u-margin-bottom-small-white">WAKE UP AND GET READY</h3>
+              <li className="bullet-points" style={{ marginBottom: "1rem" }}>Office hoodies are the best.</li>
+              <li className="bullet-points">That morning air during rapido rides hit hard.</li>
+            </div>
+
+            <div className="col-1-of-3" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+              <h3 className="heading-tertiary u-margin-bottom-small-white">LET'S DO THE CODING</h3>
+              <li className="bullet-points" style={{ marginBottom: "1rem" }}>Those Java classes and JS codes work MAGICALLY.</li>
+              <li className="bullet-points" style={{ marginBottom: "1rem" }}>YAMLs are now part of life ever since K8s came into picture</li>
+              <li className="bullet-points">Logging efforts in JIRA</li></div>
+
+            <div className="col-1-of-3" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+              <h3 className="heading-tertiary u-margin-bottom-small-white">BACK TO HOME</h3>
+              <li className="bullet-points" style={{ marginBottom: "1rem" }}>Traffic is really bad BTW</li>
+              <li className="bullet-points" style={{ marginBottom: "1rem" }}>NETFLIX</li>
+
+            </div>
           </div>
         </section>
       </main>

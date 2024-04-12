@@ -131,6 +131,25 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.heading-secondary-white {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #1ea0a0, black);
+  background-clip: unset;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all .2s;
+  color: white;
+}
+
+.heading-secondary-white:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
@@ -145,6 +164,19 @@ body {
   margin-bottom: 3rem;
 }
 
+.bullet-points {
+  list-style-type: disc;
+  font-size: 1.6rem;
+  text-indent: -3rem;
+  color: white;
+}
+
+.bullet-points:not(:last-child) {
+  list-style-type: disc;
+  font-size: 1.6rem;
+  text-indent: -3rem;
+}
+
 .u-center-text {
   text-align: center;
 }
@@ -157,6 +189,11 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.u-margin-bottom-small-white {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
 .u-margin-bottom-medium {
   margin-bottom: 4rem;
 }
@@ -164,6 +201,18 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
+  margin-top: -25vh;
+}
+
+.section-life-as-an-engineer {
+  height: 100vh;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  clip-path: polygon(0 0, 100% 12%, 100% 88%, 0% 100%);
+  background-color: #68e4ab98;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./life.jpg);
+  padding: 18rem 0;
   margin-top: -25vh;
 }
 
@@ -246,11 +295,11 @@ body {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./me-header.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 }
 
 .header__logo-box {
@@ -301,12 +350,12 @@ body {
 }
 
 .row .col-1-of-3 {
-  width: calc((100% - 6rem*2)/3);
+  width: calc((100% - 8rem*2)/3);
   float: left;
 }
 
 .row .col-1-of-3:not(:last-child) {
-  margin-right: 6rem;
+  margin-right: 8rem;
 }
 
 .row .col-2-of-3 {
