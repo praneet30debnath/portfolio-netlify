@@ -1,4 +1,3 @@
-
 import logo from './logoWhite.png'
 import './App.css';
 import { useState, useEffect } from 'react';
@@ -6,14 +5,29 @@ import onepic from './onepic.jpg';
 import onepic2 from './onepic2.jpg';
 
 function App() {
-
   const [title] = useState("PD's Coding | Portfolio | v1.0");
+  const [showButton, setShowButton] = useState(true);
 
   useEffect(() => {
     // This will run when the page first loads and whenever the title changes
     document.title = title;
-  }, [title]);
 
+    const checkScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const currentScroll = window.scrollY + windowHeight;
+
+
+      if (currentScroll >= documentHeight - 10) {
+        setShowButton(false);
+      } else {
+        setShowButton(true);
+      }
+    };
+
+    window.addEventListener('scroll', checkScroll);
+    return () => window.removeEventListener('scroll', checkScroll);
+  });
 
   const handleScroll = () => {
     const windowHeight = window.innerHeight;
@@ -25,8 +39,6 @@ function App() {
       window.scrollTo({ top: nextPageStart, behavior: 'smooth' });
     }
   };
-
-
 
   return (
     <div>
@@ -55,10 +67,10 @@ function App() {
             <div className='sectionText'>
 
               <div className="sectionTextInner" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-                <h3 className="heading-tertiary u-margin-bottom-small">Hello!  My Name is Praneet Debnath</h3>
+                <h3 className="heading-tertiary u-margin-bottom-small">Hello! My Name is Praneet Debnath</h3>
                 <p className="paragraph">I'm a 2022 Passout Grad from KIIT University, Bhubaneshwar. Currently working in a SaaS FinTech company that leverages Artificial Intelligence-based Autonomous Systems to help companies automate Accounts Receivable and Treasury processes.</p>
 
-                <h3 className="heading-tertiary u-margin-bottom-small">MY JOB ROLE - SOFTWARE ENGIEER</h3>
+                <h3 className="heading-tertiary u-margin-bottom-small">MY JOB ROLE - SOFTWARE ENGINEER</h3>
                 <p className="paragraph" style={{ marginBottom: "1rem" }}>Experienced full-stack developer adept at crafting robust solutions, leveraging 2 years of expertise across front-end, back-end, and databases.</p>
                 <p className="paragraph">Migration from ASG to K8s framework, enhancing performance and scalability seamlessly within tight timelines.</p>
 
@@ -104,7 +116,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div class="pos down-arrow" onClick={handleScroll}></div>
+      {showButton && (
+        <div className="pos down-arrow" onClick={handleScroll}></div>
+      )}
     </div>
   );
 }
