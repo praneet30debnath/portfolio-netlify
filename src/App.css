@@ -691,6 +691,17 @@ body {
   .myPic {
     display: none;
   }
+
+  .lifeAsEnggParent {
+    align-items: center;
+  }
+
+
+  .u-margin-bottom-big2 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
