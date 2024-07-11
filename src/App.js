@@ -1,15 +1,19 @@
-import logo from './logoWhite.png'
+import { useEffect } from 'react';
 import './App.css';
-import { useState, useEffect } from 'react';
+import logo from './logoWhite.png';
 import onepic from './onepic.jpg';
 import onepic2 from './onepic2.jpg';
+import WorkExperience from './Components/WorkExperience/WorkExperience';
+import { reduxActions } from './Redux/Store';
+import { useDispatch, useSelector } from 'react-redux';
 
 function App() {
-  const [title] = useState("PD's Coding | Portfolio | v1.0");
-  const [showButton, setShowButton] = useState(true);
+  const dispatch = useDispatch();
+  const title = useSelector((state) => state.rootStore.title); // Correct path to access title
+  const showButton = useSelector((state) => state.rootStore.showButton); // Correct path to access showButton
+  const currentDate = useSelector((state) => state.rootStore.currentDate);
 
   useEffect(() => {
-    // This will run when the page first loads and whenever the title changes
     document.title = title;
 
     const checkScroll = () => {
@@ -17,17 +21,16 @@ function App() {
       const documentHeight = document.documentElement.scrollHeight;
       const currentScroll = window.scrollY + windowHeight;
 
-
       if (currentScroll >= documentHeight - 10) {
-        setShowButton(false);
+        dispatch(reduxActions.setShowButton({ value: false }));
       } else {
-        setShowButton(true);
+        dispatch(reduxActions.setShowButton({ value: true }));
       }
     };
 
     window.addEventListener('scroll', checkScroll);
     return () => window.removeEventListener('scroll', checkScroll);
-  });
+  }, [title, dispatch]);
 
   const handleScroll = () => {
     const windowHeight = window.innerHeight;
@@ -39,6 +42,9 @@ function App() {
       window.scrollTo({ top: nextPageStart, behavior: 'smooth' });
     }
   };
+
+  const yearsExperience = currentDate.getFullYear() - 2021;
+  const monthsExperience = currentDate.getMonth() - 5; // Assuming the month of experience start is June (5 as the index)
 
   return (
     <div>
@@ -71,10 +77,10 @@ function App() {
                 <p className="paragraph">I'm a 2022 Passout Grad from KIIT University, Bhubaneshwar. Currently working in a SaaS FinTech company that leverages Artificial Intelligence-based Autonomous Systems to help companies automate Accounts Receivable and Treasury processes.</p>
 
                 <h3 className="heading-tertiary u-margin-bottom-small">MY JOB ROLE - SOFTWARE ENGINEER</h3>
-                <p className="paragraph" style={{ marginBottom: "1rem" }}>Experienced full-stack developer adept at crafting robust solutions, leveraging 2 years of expertise across front-end, back-end, and databases.</p>
-                <p className="paragraph">Migration from ASG to K8s framework, enhancing performance and scalability seamlessly within tight timelines.</p>
+                <p className="paragraph" style={{ marginBottom: "1rem" }}>Result-driven Full Stack Software Engineer with extensive experience of {yearsExperience} years {monthsExperience !== 0 ? (monthsExperience === 1 ? `${monthsExperience} month` : `${monthsExperience} months`) : ''} in developing FinTech applications.</p>
+                <p className="paragraph">Experienced in Java, JavaScript, Kubernetes, Redis, and UI enhancements, committed to delivering high-quality, scalable, and robust software solutions.</p>
 
-                <a href="https://drive.google.com/file/d/1pc8vdQ_uZSJGHw8GGd5DkFug0DtzWpQz/view?usp=sharing" target="_blank" className="btn-text" style={{ paddingLeft: '1rem', paddingRight: '1rem' }} rel="noreferrer">MY RESUME &rarr;</a>
+                <a href="https://drive.google.com/file/d/19_XihZhIZxWoVJIBCruNdt2DSIP8F0pu/view?usp=sharing" target="_blank" className="btn-text" style={{ paddingLeft: '1rem', paddingRight: '1rem' }} rel="noreferrer">MY RESUME &rarr;</a>
               </div>
               <div className="myPic">
                 <div className="composition">
@@ -88,34 +94,28 @@ function App() {
       </div>
       <div className="section-life-as-an-engineer">
         <div className='lifeAsEnggParent'>
-          <div className="u-center-text u-margin-bottom-big">
+          <div className="u-center-text u-margin-bottom-big2">
             <h2 className="heading-secondary-white">
-              LIFE AS A SOFTWARE ENGINEER
+              WORK EXPERIENCE
             </h2>
           </div>
-
-          <div className="row">
-            <div className="col-1-of-3" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-              <h3 className="heading-tertiary u-margin-bottom-small-white">WAKE UP AND GET READY</h3>
-              <li className="bullet-points" style={{ marginBottom: "1rem" }}>Office hoodies are the best.</li>
-              <li className="bullet-points">That morning air during rapido rides hit hard.</li>
-            </div>
-
-            <div className="col-1-of-3" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-              <h3 className="heading-tertiary u-margin-bottom-small-white">LET'S DO THE CODING</h3>
-              <li className="bullet-points" style={{ marginBottom: "1rem" }}>Those Java classes and JS codes work MAGICALLY.</li>
-              <li className="bullet-points" style={{ marginBottom: "1rem" }}>YAMLs are now part of life ever since K8s came into picture</li>
-              <li className="bullet-points">Logging efforts in JIRA</li></div>
-
-            <div className="col-1-of-3" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-              <h3 className="heading-tertiary u-margin-bottom-small-white">BACK TO HOME</h3>
-              <li className="bullet-points" style={{ marginBottom: "1rem" }}>Traffic is really bad BTW</li>
-              <li className="bullet-points" style={{ marginBottom: "1rem" }}>NETFLIX</li>
-
-            </div>
-          </div>
+          <WorkExperience />
         </div>
       </div>
+      
+      
+      {/* <div className="section-skills">
+
+        <h2 className="heading-secondary">
+          SKILLS
+        </h2>
+        <div className='section-skills-slider'>
+          <div class="hexagon"></div>
+          <div class="hexagon"></div>
+        </div>
+      </div> */}
+
+
       {showButton && (
         <div className="pos down-arrow" onClick={handleScroll}></div>
       )}

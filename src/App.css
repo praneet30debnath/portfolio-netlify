@@ -192,6 +192,10 @@ body {
   margin-bottom: 8rem;
 }
 
+.u-margin-bottom-big2 {
+  margin-bottom: 4rem;
+}
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem;
 }
@@ -257,7 +261,7 @@ body {
   clip-path: polygon(0 0, 100% 12%, 100% 88%, 0% 100%);
   background-color: #68e4ab98;
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./life.jpg);
-  padding: 18rem 0;
+  padding: 13% 0;
   margin-top: 0vh;
 }
 
@@ -549,4 +553,54 @@ body {
 
 .down-arrow:hover:after {
   left: 26px;
+}
+
+
+
+
+
+
+.section-skills {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-skills-slider {
+  background-color: red;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hexagon {
+  width: 9%; /* The width of the hexagon */
+  padding-bottom: 10.39%; /* This is the height based on the width to keep proportions (sqrt(3)/2 * width) */
+  background-color: #4CAF50; /* Hexagon color */
+  position: relative;
+  margin: 5rem auto; /* Center the hexagon horizontally */
+  display: inline-block; /* Ensure the hexagon is treated as an inline-block element */
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 4.5% solid transparent; /* Half of the width */
+  border-right: 4.5% solid transparent; /* Half of the width */
+}
+
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 5.195% solid #4CAF50; /* Half of the height of .hexagon */
+}
+
+.hexagon:after {
+  top: 100%;
+  border-top: 5.195% solid #4CAF50; /* Half of the height of .hexagon */
 }
