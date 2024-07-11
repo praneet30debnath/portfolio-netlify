@@ -369,6 +369,7 @@ body {
 .header__text-box {
   position: absolute;
   top: 40%;
+  width: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -578,12 +579,17 @@ body {
 }
 
 .hexagon {
-  width: 9%; /* The width of the hexagon */
-  padding-bottom: 10.39%; /* This is the height based on the width to keep proportions (sqrt(3)/2 * width) */
-  background-color: #4CAF50; /* Hexagon color */
+  width: 9%;
+  /* The width of the hexagon */
+  padding-bottom: 10.39%;
+  /* This is the height based on the width to keep proportions (sqrt(3)/2 * width) */
+  background-color: #4CAF50;
+  /* Hexagon color */
   position: relative;
-  margin: 5rem auto; /* Center the hexagon horizontally */
-  display: inline-block; /* Ensure the hexagon is treated as an inline-block element */
+  margin: 5rem auto;
+  /* Center the hexagon horizontally */
+  display: inline-block;
+  /* Ensure the hexagon is treated as an inline-block element */
 }
 
 .hexagon:before,
@@ -591,16 +597,97 @@ body {
   content: "";
   position: absolute;
   width: 0;
-  border-left: 4.5% solid transparent; /* Half of the width */
-  border-right: 4.5% solid transparent; /* Half of the width */
+  border-left: 4.5% solid transparent;
+  /* Half of the width */
+  border-right: 4.5% solid transparent;
+  /* Half of the width */
 }
 
 .hexagon:before {
   bottom: 100%;
-  border-bottom: 5.195% solid #4CAF50; /* Half of the height of .hexagon */
+  border-bottom: 5.195% solid #4CAF50;
+  /* Half of the height of .hexagon */
 }
 
 .hexagon:after {
   top: 100%;
-  border-top: 5.195% solid #4CAF50; /* Half of the height of .hexagon */
+  border-top: 5.195% solid #4CAF50;
+  /* Half of the height of .hexagon */
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header__logo {
+    height: 3rem;
+  }
+
+  .header__text-box {
+    top: 30%;
+  }
+
+  .btn, .btn-text {
+    padding: 1.2rem 3rem;
+  }
+
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+
+  .heading-primary--main {
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1.6rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* animation-delay: 0.5s;
+    animation-iteration-count: 3; */
+    animation-timing-function: frames(144), ease-in-out;
+  }
+
+
+  .heading-primary--sub {
+    margin-top: 2rem;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    /* animation-delay: 0.5s;
+    animation-iteration-count: 3; */
+    animation-timing-function: frames(144), ease-in-out;
+  }
+
+
+
+  .sectionText {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .sectionTextInner {
+    width: 100%;
+    float: left;
+    padding-left: 3%;
+  }
+
+  .sectionTextInner:not(:last-child) {
+    margin-right: 6rem;
+  }
+
+  .u-margin-bottom-big {
+    margin-bottom: 2rem;
+  }
+
+  .myPic {
+    display: none;
+  }
 }
