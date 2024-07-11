@@ -677,6 +677,7 @@ body {
     width: 100%;
     float: left;
     padding-left: 3%;
+    padding-right: 3%;
   }
 
   .sectionTextInner:not(:last-child) {
@@ -689,5 +690,11 @@ body {
 
   .myPic {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    background-position: 25% center;
   }
 }
