@@ -698,9 +698,17 @@ body {
 
 
   .u-margin-bottom-big2 {
-    margin-top: 4rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
     width: 70%;
+  }
+
+  .section-about {
+    margin-top: 5rem;
+  }
+
+  .section-life-as-an-engineer {
+    margin-top: 5rem;
   }
 }
 
