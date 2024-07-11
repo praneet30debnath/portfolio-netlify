@@ -49,6 +49,12 @@ const WorkExperience = () => {
                         height: '38vh',
                     },
                     justifyContent: 'space-around',
+                    '@media (max-width: 768px)': {
+                        '& > :not(style)': {
+                            width: '45%',
+                            height: '20vh',
+                        },
+                    },
                 }}
             >
                 <Paper
