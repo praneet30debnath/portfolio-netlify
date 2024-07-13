@@ -1,0 +1,146 @@
+.section-skills {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-skills-divider {
+    display: flex;
+    height: 50%;
+    width: 100%;
+
+}
+
+
+.language-and-framework-parent {
+    height: 100%;
+    width: 50%;
+    margin: 0 2%;
+    --b: .7em;
+    /* border width */
+    --c: 7em;
+    /* corner size */
+    --r: 2em;
+    /* corner rounding */
+    position: relative;
+    border: solid var(--b) transparent;
+    font: 1.25em ubuntu, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        inset: calc(-1*var(--b));
+        border: inherit;
+        border-radius: var(--r);
+        background: linear-gradient(orange, deeppink, purple) border-box;
+        --corner:
+            conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0) 0 0/ calc(100% - var(--c)) calc(100% - var(--c)) border-box;
+        --inner: conic-gradient(red 0 0) padding-box;
+        -webkit-mask: var(--corner), var(--inner);
+        mask: var(--corner) subtract, var(--inner);
+        content: ''
+    }
+}
+
+.language-and-framework-parent-header {
+    width: 90%;
+
+}
+
+.language-and-framework-parent-header-text {
+    padding-left: 2rem;
+    letter-spacing: 0.1em;
+    font-family: "Trirong", sans-serif !important;
+    font-size: 3rem !important;
+    color: #6d6868;
+    text-align: center;
+}
+
+.language-and-framework-parent-desc {
+    margin-top: 3%;
+    width: 70%;
+}
+
+.language-and-framework-parent-desc-text {
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .section-skills-divider {
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        width: 90%;
+    }
+
+    .heading-secondary {
+        line-height: 120%;
+    }
+
+    .heading-secondary-white {
+        line-height: 120%;
+    }
+
+
+    .language-and-framework-parent {
+        height: 50%;
+        width: 100%;
+        margin: 2% 0;
+        --b: .6em;
+        /* border width */
+        --c: 4em;
+        /* corner size */
+        --r: 1.5em;
+        /* corner rounding */
+        position: relative;
+        border: solid var(--b) transparent;
+        font: 1.25em ubuntu, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &::before {
+            position: absolute;
+            z-index: -1;
+            inset: calc(-1*var(--b));
+            border: inherit;
+            border-radius: var(--r);
+            background: linear-gradient(orange, deeppink, purple) border-box;
+            --corner:
+                conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0) 0 0/ calc(100% - var(--c)) calc(100% - var(--c)) border-box;
+            --inner: conic-gradient(red 0 0) padding-box;
+            -webkit-mask: var(--corner), var(--inner);
+            mask: var(--corner) subtract, var(--inner);
+            content: ''
+        }
+    }
+
+
+
+    .language-and-framework-parent-header-text {
+        padding-left: 2rem;
+        letter-spacing: 0.05em;
+        font-family: "Trirong", sans-serif !important;
+        font-size: 1.3rem !important;
+        color: #6d6868;
+        text-align: center;
+    }
+
+
+    .language-and-framework-parent-desc-text {
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+}

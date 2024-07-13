@@ -6,6 +6,7 @@ import onepic2 from './onepic2.jpg';
 import WorkExperience from './Components/WorkExperience/WorkExperience';
 import { reduxActions } from './Redux/Store';
 import { useDispatch, useSelector } from 'react-redux';
+import Skills from './Components/Skills/Skills';
 
 function App() {
   const dispatch = useDispatch();
@@ -102,6 +103,9 @@ function App() {
           <WorkExperience />
         </div>
       </div>
+
+
+      <Skills />
       
       
       {/* <div className="section-skills">

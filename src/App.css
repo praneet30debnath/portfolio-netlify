@@ -121,7 +121,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -139,7 +139,7 @@ body {
 }
 
 .heading-secondary-white {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -554,65 +554,6 @@ body {
 
 .down-arrow:hover:after {
   left: 26px;
-}
-
-
-
-
-
-
-.section-skills {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-skills-slider {
-  background-color: red;
-  height: 40%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hexagon {
-  width: 9%;
-  /* The width of the hexagon */
-  padding-bottom: 10.39%;
-  /* This is the height based on the width to keep proportions (sqrt(3)/2 * width) */
-  background-color: #4CAF50;
-  /* Hexagon color */
-  position: relative;
-  margin: 5rem auto;
-  /* Center the hexagon horizontally */
-  display: inline-block;
-  /* Ensure the hexagon is treated as an inline-block element */
-}
-
-.hexagon:before,
-.hexagon:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 4.5% solid transparent;
-  /* Half of the width */
-  border-right: 4.5% solid transparent;
-  /* Half of the width */
-}
-
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 5.195% solid #4CAF50;
-  /* Half of the height of .hexagon */
-}
-
-.hexagon:after {
-  top: 100%;
-  border-top: 5.195% solid #4CAF50;
-  /* Half of the height of .hexagon */
 }
 
 
