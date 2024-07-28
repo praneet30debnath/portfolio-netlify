@@ -157,6 +157,14 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+
+
+.section-about {
+  position: relative;
+  z-index: 1;
+  /* lower value to keep it behind modal */
+}
+
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700;
@@ -263,6 +271,8 @@ body {
   background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./life.jpg);
   padding: 13% 0;
   margin-top: 0vh;
+  overflow: visible;
+  /* Ensure overflow is visible */
 }
 
 .btn:link, .btn:visited {
@@ -557,6 +567,77 @@ body {
 }
 
 
+
+.btn-2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-2 a {
+  text-decoration: none;
+  border: 2px solid #010100;
+  padding: 15px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn-2-span {
+  position: relative;
+  /* z-index coz when we put bg to before and after this span text will not be visible */
+  z-index: 3;
+  margin-top: 20px;
+}
+
+.btn-2 a:hover::before {
+  transform: scaleY(0);
+}
+
+.btn-2 a:hover::after {
+  transform: scaleX(0);
+}
+
+.btn-2 a {
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-2 a:hover {
+  color: #000000;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn-2 a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+
+.btn-2 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
+
 @media only screen and (max-width: 768px) {
   .header__logo {
     height: 3rem;
@@ -651,6 +732,42 @@ body {
   .section-life-as-an-engineer {
     margin-top: 5rem;
   }
+
+
+
+  .resumeContactParent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn {
+    margin: 1rem 2rem !important;
+    width: 32rem;
+    height: 50px;
+  }
+
+  .heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .header__text-box {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .btn-2 {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -661,4 +778,31 @@ body {
   .pos {
     display: none;
   }
+}
+
+.resumeContactParent {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 0 2rem;
+}
+
+.topNavbar {
+  height: 10px;
+  background-color: transparent;
+  position: fixed;
+  z-index: 50000;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2%;
+  padding: 10px 20px;
+}
+
+.navbarLinks {
+  color: black;
 }

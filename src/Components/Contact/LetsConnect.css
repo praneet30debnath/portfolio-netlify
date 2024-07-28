@@ -1,0 +1,131 @@
+.letsConnectParent {
+    height: 100vh;
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    clip-path: polygon(0 0, 100% 12%, 100% 88%, 0% 100%);
+    background-color: #68e4ab98;
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(../../coffee.jpg);
+    padding: 13% 0;
+    margin-top: 0vh;
+    overflow: visible;
+    /* Ensure overflow is visible */
+}
+
+
+
+.u-margin-bottom-big3 {
+    margin-bottom: 0.5rem;
+}
+
+
+
+.heading-tertiary-white {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    background-image: linear-gradient(to right, #1ea0a0, black);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 0.1rem;
+    transition: all .2s;
+    color: white;
+}
+
+.emailContentParent {
+    margin-top: 5%;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contactBox {
+    width: 60%;
+    height: 40%;
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    border-radius: 2rem;
+    align-items: center;
+}
+
+.envelope {
+    height: 30%;
+}
+
+.linkedIn {
+    height: 30%;
+    margin-left: 5%;
+}
+
+.contactDesc {
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    /* Add smooth transition */
+}
+
+.contactDesc:hover {
+    transform: scale(4.1);
+    /* Enlarge the element on hover */
+}
+
+.copyright {
+    color: white;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .u-margin-bottom-big3 {
+        margin-top: 4rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .u-margin-bottom-big4 {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .emailContentParent {
+        height: 60%;
+    }
+
+    .contactBox {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 7%;
+        justify-content: center;
+        border: 2px solid #ffffff;
+        border-radius: 2rem;
+        align-items: center;
+    }
+
+    .mailParent {
+        display: flex;
+        height: 15%;
+        gap: 5%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .envelope {
+        height: 80%;
+    }
+
+    .linkedIn {
+        height: 80%;
+    }
+}

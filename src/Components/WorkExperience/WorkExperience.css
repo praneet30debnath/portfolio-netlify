@@ -32,10 +32,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-}
+    z-index: 1000; /* Make sure this is higher than the z-index of .section-life-as-an-engineer */
+  }
 
 .modalContent-intern {
+    position: fixed;
+    z-index: 1000;
     background-color: #fff;
     padding: 20px;
     border-radius: 1rem;

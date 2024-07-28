@@ -20,7 +20,7 @@ const ASE2 = () => {
                 <span className="closeButton" onClick={handleClose}>&times;</span>
                 <div className="modalContent-parent">
                     <div className="modalContent-header">
-                        <h2 className="modalContent-header-h2">Associate Software Engineer I | Hyderabad - IN</h2>
+                        <h2 className="modalContent-header-h2">Associate Software Engineer II | Hyderabad - IN</h2>
                         <p className="modalContent-header-p">Jul 2022 - Jun 2023</p>
                     </div>
                     <div className="modalContent-bullets">
