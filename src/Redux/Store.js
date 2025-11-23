@@ -7,7 +7,9 @@ const initialState = {
     showScrollDownButton: true,
     analyticsInternModalIsOpen: false,
     ase1IsOpen: false,
-    ase2IsOpen: false
+    ase2IsOpen: false,
+    highRadiusModalIsOpen: false,
+    oracleModalIsOpen: false
 };
 
 const counterSlice = createSlice({
@@ -28,6 +30,12 @@ const counterSlice = createSlice({
         },
         setAse2IsOpen: (state, action) => {
             state.ase2IsOpen = action.payload.value;
+        },
+        setHighRadiusModalIsOpen: (state, action) => {
+            state.highRadiusModalIsOpen = action.payload.value;
+        },
+        setOracleModalIsOpen: (state, action) => {
+            state.oracleModalIsOpen = action.payload.value;
         }
     }
 });

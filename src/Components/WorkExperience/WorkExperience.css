@@ -8,6 +8,17 @@
     align-items: center;
 }
 
+.paperTwo {
+    height: 100%;
+    width: 100%;
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.233), #f1f1f1, rgba(0, 0, 0, 0.233));
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
 .internParent {
     position: fixed;
     height: 90vh;
@@ -17,7 +28,7 @@
 }
 
 .workExperienceParent {
-    height: 100%;
+    height: auto;
     width: 100%;
     position: relative;
 }
@@ -32,28 +43,47 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Make sure this is higher than the z-index of .section-life-as-an-engineer */
+    z-index: 99999;
   }
 
 .modalContent-intern {
-    position: fixed;
-    z-index: 1000;
+    z-index: 100000;
     background-color: #fff;
     padding: 20px;
+    padding-bottom: 40px;
     border-radius: 1rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     width: 1400px;
     position: relative;
-    height: 500px;
+    max-height: 85vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.233), #f1f1f1, rgba(0, 0, 0, 0.233));
+}
+
+.modalContent-intern::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modalContent-intern::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modalContent-intern::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.modalContent-intern::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .modalContent-parent {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
+    justify-content: flex-start;
 }
 
 .modalContent-header {
@@ -127,6 +157,36 @@ h2 {
     font-weight: 600;
 }
 
+.modalContent-section {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.modalContent-section:last-child {
+    margin-bottom: 3rem;
+}
+
+.modalContent-subheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.modalContent-subheader-h3 {
+    font-size: 220%;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.modalContent-subheader-p {
+    font-size: 180%;
+    font-weight: 500;
+    color: #777;
+}
+
 
 
 @media only screen and (max-width: 768px) {
@@ -180,12 +240,15 @@ h2 {
 
     .modalContent-intern {
         background-color: #fff;
-        padding: 20px;
+        padding: 15px;
+        padding-bottom: 30px;
         border-radius: 1rem;
         box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-        width: 1400px;
+        width: 90%;
         position: relative;
-        height: 450px;
+        max-height: 85vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
         background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.233), #f1f1f1, rgba(0, 0, 0, 0.233));
         margin-left: 1rem;
         margin-right: 1rem;
@@ -209,5 +272,24 @@ h2 {
     .modalContent-bullets-li {
         font-size: 110%;
         text-align: justify;
+    }
+
+    .modalContent-subheader-h3 {
+        font-size: 130%;
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 0.3rem;
+        text-align: center;
+    }
+
+    .modalContent-subheader-p {
+        font-size: 110%;
+        font-weight: 500;
+        color: #777;
+    }
+
+    .modalContent-section {
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }

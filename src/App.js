@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import logo from './logoWhite.png';
-import onepic from './onepic.jpg';
-import onepic2 from './onepic2.jpg';
+import logo from './Images/Misc/logoWhite.png';
+import onepic from './Images/PraneetSnaps/bday_pic1.jpg';
+import onepic2 from './Images/PraneetSnaps/DPuja.jpg';
 import WorkExperience from './Components/WorkExperience/WorkExperience';
 import { reduxActions } from './Redux/Store';
 import { useDispatch, useSelector } from 'react-redux';
@@ -62,7 +62,6 @@ function App() {
 
     sections.forEach((section, index) => {
       const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
 
       if (currentScroll < sectionTop && !nextSection) {
         nextSection = section;
@@ -123,10 +122,10 @@ function App() {
             <div className='sectionText'>
               <div className="sectionTextInner" style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
                 <h3 className="heading-tertiary u-margin-bottom-small">Hello! My Name is Praneet Debnath</h3>
-                <p className="paragraph">I'm a 2022 Passout Grad from KIIT University, Bhubaneshwar. Currently working in a SaaS FinTech company that leverages Artificial Intelligence-based Autonomous Systems to help companies automate Accounts Receivable and Treasury processes.</p>
+                <p className="paragraph">I'm a 2022 graduate from KIIT University, Bhubaneshwar. I began my career at a SaaS FinTech company building AI-powered autonomous systems for Accounts Receivable and Treasury automation. I am currently a Member of Technical Staff at Oracle, where I work on improving the deployment model to make it more efficient, systematic, and backed by proper audit logging.</p>
 
                 <h3 className="heading-tertiary u-margin-bottom-small">MY JOB ROLE - SOFTWARE ENGINEER</h3>
-                <p className="paragraph" style={{ marginBottom: "1rem" }}>Result-driven Full Stack Software Engineer with extensive experience of {yearsExperience} years {monthsExperience !== 0 ? (monthsExperience === 1 ? `${monthsExperience} month` : `${monthsExperience} months`) : ''} in developing FinTech applications.</p>
+                <p className="paragraph" style={{ marginBottom: "1rem" }}>Result-driven Full Stack Software Engineer with extensive experience of {yearsExperience} years {monthsExperience !== 0 ? (monthsExperience === 1 ? `${monthsExperience} month` : `${monthsExperience} months`) : ''} in developing FinTech applications and optimizing legacy DevOps model.</p>
                 <p className="paragraph">Experienced in Java, JavaScript, Kubernetes, Redis, and UI enhancements, committed to delivering high-quality, scalable, and robust software solutions.</p>
               </div>
               <div className="myPic">

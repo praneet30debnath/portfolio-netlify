@@ -268,7 +268,7 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 12%, 100% 88%, 0% 100%);
   background-color: #68e4ab98;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./life.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./Images/Misc/life.jpg);
   padding: 13% 0;
   margin-top: 0vh;
   overflow: visible;
@@ -354,7 +354,7 @@ body {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./me-header.jpg);
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.9), rgba(0, 255, 255, 0.8)), url(./Images/PraneetSnaps/me-header.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -438,6 +438,8 @@ body {
   z-index: 10;
   transition: all .2s;
   outline-offset: 2rem;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .composition__photo--p1 {
@@ -450,6 +452,9 @@ body {
   right: -2rem;
   top: 14rem;
   border-radius: 1rem;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.1);
 }
 
 .composition__photo:hover {
