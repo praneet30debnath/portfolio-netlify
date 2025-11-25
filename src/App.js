@@ -8,6 +8,7 @@ import { reduxActions } from './Redux/Store';
 import { useDispatch, useSelector } from 'react-redux';
 import Skills from './Components/Skills/Skills';
 import LetsConnect from './Components/Contact/LetsConnect';
+import VisitorCounter from './Components/VisitorCounter/VisitorCounter';
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -102,6 +103,7 @@ function App() {
           <h1 className="heading-primary">
             <span className="heading-primary--main">PORTFOLIO</span>
             <span className="heading-primary--sub">Praneet Debnath</span>
+            <VisitorCounter />
           </h1>
           <div className="resumeContactParent">
             <a href="https://drive.google.com/file/d/19_XihZhIZxWoVJIBCruNdt2DSIP8F0pu/view?usp=sharing" className="btn btn--white btn--animated" target="_blank" rel="noreferrer">Download CV</a>

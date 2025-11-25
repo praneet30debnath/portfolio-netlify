@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Backend (separate repository)
+/visitor-counter-backend
+
+# Memory bank (session context)
+/memory-bank
